@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D894C19D-E66B-4DE3-9D57-042E3F92284E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WOVInvoicingDLL</RootNamespace>
+    <AssemblyName>WOVInvoicingDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindSortedWOVBillingCodesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedWOVBillingCodesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSortedWOVTasksByOfficeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedWOVTasksByOfficeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSortedWOVTasksDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedWOVTasksDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWOVBillingCodesByBillingIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWOVBillingCodesByBillingIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWOVInvoiceByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWOVInvoiceByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWOVInvoicingByAssignedProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWOVInvoicingByAssignedProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWOVInvoicingByBillingIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWOVInvoicingByBillingIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWOVInvoicingByEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWOVInvoicingByEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWOVInvoicingItemsByBillingIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWOVInvoicingItemsByBillingIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWOVInvoicingItemsByOfficeIDAndBillingIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWOVInvoicingItemsByOfficeIDAndBillingIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWOVInvoicingItemsByProjectIdentificationIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWOVInvoicingItemsByProjectIdentificationIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWOVTaskByWOVTaskIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWOVTaskByWOVTaskIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertWOVBillingCodesEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertWOVBillingCodesEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertWOVInvoiceEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertWOVInvoiceEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertWOVInvoicingItemsEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertWOVInvoicingItemsEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertWOVTaskEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertWOVTaskEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateWOVTaskPriceEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateWOVTaskPriceEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WOVBillingCodesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WOVBillingCodesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WOVInvoicingClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WOVInvoicingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WOVInvoicingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WOVInvoicingItemsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WOVInvoicingItemsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WOVTasksDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WOVTasksDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FindSortedWOVBillingCodesDataSet.xsc">
+      <DependentUpon>FindSortedWOVBillingCodesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedWOVBillingCodesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedWOVBillingCodesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedWOVBillingCodesDataSet.xss">
+      <DependentUpon>FindSortedWOVBillingCodesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedWOVTasksByOfficeIDDataSet.xsc">
+      <DependentUpon>FindSortedWOVTasksByOfficeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedWOVTasksByOfficeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedWOVTasksByOfficeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedWOVTasksByOfficeIDDataSet.xss">
+      <DependentUpon>FindSortedWOVTasksByOfficeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedWOVTasksDataSet.xsc">
+      <DependentUpon>FindSortedWOVTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedWOVTasksDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedWOVTasksDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedWOVTasksDataSet.xss">
+      <DependentUpon>FindSortedWOVTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVBillingCodesByBillingIDDataSet.xsc">
+      <DependentUpon>FindWOVBillingCodesByBillingIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVBillingCodesByBillingIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWOVBillingCodesByBillingIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWOVBillingCodesByBillingIDDataSet.xss">
+      <DependentUpon>FindWOVBillingCodesByBillingIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoiceByDateRangeDataSet.xsc">
+      <DependentUpon>FindWOVInvoiceByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoiceByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWOVInvoiceByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWOVInvoiceByDateRangeDataSet.xss">
+      <DependentUpon>FindWOVInvoiceByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoicingByAssignedProjectIDDataSet.xsc">
+      <DependentUpon>FindWOVInvoicingByAssignedProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoicingByAssignedProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWOVInvoicingByAssignedProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWOVInvoicingByAssignedProjectIDDataSet.xss">
+      <DependentUpon>FindWOVInvoicingByAssignedProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoicingByBillingIDDataSet.xsc">
+      <DependentUpon>FindWOVInvoicingByBillingIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoicingByBillingIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWOVInvoicingByBillingIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWOVInvoicingByBillingIDDataSet.xss">
+      <DependentUpon>FindWOVInvoicingByBillingIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoicingByEmployeeIDDataSet.xsc">
+      <DependentUpon>FindWOVInvoicingByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoicingByEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWOVInvoicingByEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWOVInvoicingByEmployeeIDDataSet.xss">
+      <DependentUpon>FindWOVInvoicingByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoicingItemsByBillingIDDataSet.xsc">
+      <DependentUpon>FindWOVInvoicingItemsByBillingIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoicingItemsByBillingIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWOVInvoicingItemsByBillingIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWOVInvoicingItemsByBillingIDDataSet.xss">
+      <DependentUpon>FindWOVInvoicingItemsByBillingIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoicingItemsByOfficeIDAndBillingIDDataSet.xsc">
+      <DependentUpon>FindWOVInvoicingItemsByOfficeIDAndBillingIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoicingItemsByOfficeIDAndBillingIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWOVInvoicingItemsByOfficeIDAndBillingIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWOVInvoicingItemsByOfficeIDAndBillingIDDataSet.xss">
+      <DependentUpon>FindWOVInvoicingItemsByOfficeIDAndBillingIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoicingItemsByProjectIdentificationIDDataSet.xsc">
+      <DependentUpon>FindWOVInvoicingItemsByProjectIdentificationIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoicingItemsByProjectIdentificationIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWOVInvoicingItemsByProjectIdentificationIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWOVInvoicingItemsByProjectIdentificationIDDataSet.xss">
+      <DependentUpon>FindWOVInvoicingItemsByProjectIdentificationIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVTaskByWOVTaskIDDataSet.xsc">
+      <DependentUpon>FindWOVTaskByWOVTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVTaskByWOVTaskIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWOVTaskByWOVTaskIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWOVTaskByWOVTaskIDDataSet.xss">
+      <DependentUpon>FindWOVTaskByWOVTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWOVBillingCodesEntry.xsc">
+      <DependentUpon>InsertWOVBillingCodesEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWOVBillingCodesEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertWOVBillingCodesEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertWOVBillingCodesEntry.xss">
+      <DependentUpon>InsertWOVBillingCodesEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWOVInvoiceEntry.xsc">
+      <DependentUpon>InsertWOVInvoiceEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWOVInvoiceEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertWOVInvoiceEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertWOVInvoiceEntry.xss">
+      <DependentUpon>InsertWOVInvoiceEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWOVInvoicingItemsEntry.xsc">
+      <DependentUpon>InsertWOVInvoicingItemsEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWOVInvoicingItemsEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertWOVInvoicingItemsEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertWOVInvoicingItemsEntry.xss">
+      <DependentUpon>InsertWOVInvoicingItemsEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWOVTaskEntry.xsc">
+      <DependentUpon>InsertWOVTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWOVTaskEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertWOVTaskEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertWOVTaskEntry.xss">
+      <DependentUpon>InsertWOVTaskEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateWOVTaskPriceEntry.xsc">
+      <DependentUpon>UpdateWOVTaskPriceEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWOVTaskPriceEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateWOVTaskPriceEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateWOVTaskPriceEntry.xss">
+      <DependentUpon>UpdateWOVTaskPriceEntry.xsd</DependentUpon>
+    </None>
+    <None Include="WOVBillingCodesDataSet.xsc">
+      <DependentUpon>WOVBillingCodesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WOVBillingCodesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WOVBillingCodesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WOVBillingCodesDataSet.xss">
+      <DependentUpon>WOVBillingCodesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WOVInvoicingDataSet.xsc">
+      <DependentUpon>WOVInvoicingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WOVInvoicingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WOVInvoicingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WOVInvoicingDataSet.xss">
+      <DependentUpon>WOVInvoicingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WOVInvoicingItemsDataSet.xsc">
+      <DependentUpon>WOVInvoicingItemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WOVInvoicingItemsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WOVInvoicingItemsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WOVInvoicingItemsDataSet.xss">
+      <DependentUpon>WOVInvoicingItemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WOVTasksDataSet.xsc">
+      <DependentUpon>WOVTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WOVTasksDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WOVTasksDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WOVTasksDataSet.xss">
+      <DependentUpon>WOVTasksDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
