@@ -59,6 +59,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindSortedWOVTasksDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindWOVBillingCodeByDescriptionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWOVBillingCodeByDescriptionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWOVBillingCodesByBillingCodesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWOVBillingCodesByBillingCodesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindWOVBillingCodesByBillingIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -191,6 +201,28 @@
     </None>
     <None Include="FindSortedWOVTasksDataSet.xss">
       <DependentUpon>FindSortedWOVTasksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVBillingCodeByDescriptionDataSet.xsc">
+      <DependentUpon>FindWOVBillingCodeByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVBillingCodeByDescriptionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWOVBillingCodeByDescriptionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWOVBillingCodeByDescriptionDataSet.xss">
+      <DependentUpon>FindWOVBillingCodeByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVBillingCodesByBillingCodesDataSet.xsc">
+      <DependentUpon>FindWOVBillingCodesByBillingCodesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVBillingCodesByBillingCodesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWOVBillingCodesByBillingCodesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWOVBillingCodesByBillingCodesDataSet.xss">
+      <DependentUpon>FindWOVBillingCodesByBillingCodesDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindWOVBillingCodesByBillingIDDataSet.xsc">
       <DependentUpon>FindWOVBillingCodesByBillingIDDataSet.xsd</DependentUpon>

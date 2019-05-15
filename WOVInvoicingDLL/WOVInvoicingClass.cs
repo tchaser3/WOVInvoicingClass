@@ -75,6 +75,42 @@ namespace WOVInvoicingDLL
         FindWOVInvoicingItemsByProjectIdentificationIDDataSet aFindWOVInvoicingItemsByProjectIdentificationIDDataSet;
         FindWOVInvoicingItemsByProjectIdentificationIDDataSetTableAdapters.FindWOVInvoicingItemsByProjectIdentificationIDTableAdapter aFindWOVInvoicingItemsByProjectIdenitificationIDTableAdapter;
 
+        FindWOVBillingCodesByBillingCodesDataSet aFindWOVBillingCodesByBillingCodesDataSet;
+        FindWOVBillingCodesByBillingCodesDataSetTableAdapters.FindWOVBillingCodeByBillingCodeTableAdapter aFindWOVBillingCodesbyBillingCodesTableAdapter;
+
+        FindWOVBillingCodeByDescriptionDataSet aFindWOVBillingCodeByDescriptionDataSet;
+        FindWOVBillingCodeByDescriptionDataSetTableAdapters.FindWOVBillingCodeByDescriptionTableAdapter aFindWOVBillingCodeByDescriptionTableAdapter;
+
+        public FindWOVBillingCodeByDescriptionDataSet FindWOVBillingCodesByDescription(string strBillingDescription)
+        {
+            try
+            {
+                aFindWOVBillingCodeByDescriptionDataSet = new FindWOVBillingCodeByDescriptionDataSet();
+                aFindWOVBillingCodeByDescriptionTableAdapter = new FindWOVBillingCodeByDescriptionDataSetTableAdapters.FindWOVBillingCodeByDescriptionTableAdapter();
+                aFindWOVBillingCodeByDescriptionTableAdapter.Fill(aFindWOVBillingCodeByDescriptionDataSet.FindWOVBillingCodeByDescription, strBillingDescription);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "WOV Invoicing Class // Find WOV Billing Codes By Description " + Ex.Message);
+            }
+
+            return aFindWOVBillingCodeByDescriptionDataSet;
+        }
+        public FindWOVBillingCodesByBillingCodesDataSet FindWOVBillingCodesByBillingCodes(string strBillingCodes)
+        {
+            try
+            {
+                aFindWOVBillingCodesByBillingCodesDataSet = new FindWOVBillingCodesByBillingCodesDataSet();
+                aFindWOVBillingCodesbyBillingCodesTableAdapter = new FindWOVBillingCodesByBillingCodesDataSetTableAdapters.FindWOVBillingCodeByBillingCodeTableAdapter();
+                aFindWOVBillingCodesbyBillingCodesTableAdapter.Fill(aFindWOVBillingCodesByBillingCodesDataSet.FindWOVBillingCodeByBillingCode, strBillingCodes);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "WOV Invoicing Class // Find WOV Billing Codes By Billing Codes " + Ex.Message);
+            }
+
+            return aFindWOVBillingCodesByBillingCodesDataSet;
+        }
         public FindWOVInvoicingItemsByProjectIdentificationIDDataSet FindWOVInvoicingItemsByProjectIdentificationID(int intProjectIdentificationID)
         {
             try
