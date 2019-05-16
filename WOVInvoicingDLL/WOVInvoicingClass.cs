@@ -81,6 +81,26 @@ namespace WOVInvoicingDLL
         FindWOVBillingCodeByDescriptionDataSet aFindWOVBillingCodeByDescriptionDataSet;
         FindWOVBillingCodeByDescriptionDataSetTableAdapters.FindWOVBillingCodeByDescriptionTableAdapter aFindWOVBillingCodeByDescriptionTableAdapter;
 
+        UpdateWOVBillingCodeDescriptionEntryTableAdapters.QueriesTableAdapter aUpdateWOVBillingCodeDescriptionTableAdapter;
+
+        public bool UpdateWOVBillingCodeDescription(int intBillingId, string strBillingDescription)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateWOVBillingCodeDescriptionTableAdapter = new UpdateWOVBillingCodeDescriptionEntryTableAdapters.QueriesTableAdapter();
+                aUpdateWOVBillingCodeDescriptionTableAdapter.UpdateWOVBillingCodeDescription(intBillingId, strBillingDescription);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "WOV Invoicing Class // Update WOV Billing Code Description " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
         public FindWOVBillingCodeByDescriptionDataSet FindWOVBillingCodesByDescription(string strBillingDescription)
         {
             try

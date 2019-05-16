@@ -139,6 +139,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="UpdateWOVBillingCodeDescriptionEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateWOVBillingCodeDescriptionEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdateWOVTaskPriceEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -370,6 +375,17 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateWOVBillingCodeDescriptionEntry.xsc">
+      <DependentUpon>UpdateWOVBillingCodeDescriptionEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWOVBillingCodeDescriptionEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateWOVBillingCodeDescriptionEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateWOVBillingCodeDescriptionEntry.xss">
+      <DependentUpon>UpdateWOVBillingCodeDescriptionEntry.xsd</DependentUpon>
     </None>
     <None Include="UpdateWOVTaskPriceEntry.xsc">
       <DependentUpon>UpdateWOVTaskPriceEntry.xsd</DependentUpon>
