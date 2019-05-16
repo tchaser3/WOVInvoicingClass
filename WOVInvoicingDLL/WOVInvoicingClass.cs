@@ -83,6 +83,24 @@ namespace WOVInvoicingDLL
 
         UpdateWOVBillingCodeDescriptionEntryTableAdapters.QueriesTableAdapter aUpdateWOVBillingCodeDescriptionTableAdapter;
 
+        FindWOVTaskByOfficeIDandDescriptionDataSet aFindWOVTaskByOfficeIDandDescriptionDataSet;
+        FindWOVTaskByOfficeIDandDescriptionDataSetTableAdapters.FindWOVTaskByOfficeIDAndDescriptionTableAdapter aFindWOVTaskByOfficeIDAndDescriptionTableAdapter;
+
+        public FindWOVTaskByOfficeIDandDescriptionDataSet FindWOVTaskByOfficeIDAndDescription(int intOfficeID, string strWOVTaskDescription)
+        {
+            try
+            {
+                aFindWOVTaskByOfficeIDandDescriptionDataSet = new FindWOVTaskByOfficeIDandDescriptionDataSet();
+                aFindWOVTaskByOfficeIDAndDescriptionTableAdapter = new FindWOVTaskByOfficeIDandDescriptionDataSetTableAdapters.FindWOVTaskByOfficeIDAndDescriptionTableAdapter();
+                aFindWOVTaskByOfficeIDAndDescriptionTableAdapter.Fill(aFindWOVTaskByOfficeIDandDescriptionDataSet.FindWOVTaskByOfficeIDAndDescription, intOfficeID, strWOVTaskDescription);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "WOV Invoicing Class // Find WOV Task By Office ID And Description " + Ex.Message);
+            }
+
+            return aFindWOVTaskByOfficeIDandDescriptionDataSet;
+        }
         public bool UpdateWOVBillingCodeDescription(int intBillingId, string strBillingDescription)
         {
             bool blnFatalError = false;
