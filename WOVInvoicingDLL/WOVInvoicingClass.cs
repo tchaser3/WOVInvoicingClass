@@ -86,6 +86,24 @@ namespace WOVInvoicingDLL
         FindWOVTaskByOfficeIDandDescriptionDataSet aFindWOVTaskByOfficeIDandDescriptionDataSet;
         FindWOVTaskByOfficeIDandDescriptionDataSetTableAdapters.FindWOVTaskByOfficeIDAndDescriptionTableAdapter aFindWOVTaskByOfficeIDAndDescriptionTableAdapter;
 
+        FindWOVTaskByDescriptionDataSet aFindWOVTaskByDescriptionDataSet;
+        FindWOVTaskByDescriptionDataSetTableAdapters.FindWOVTaskByDescriptionTableAdapter aFindWOVTaskByDescriptionTableAdapter;
+
+        public FindWOVTaskByDescriptionDataSet FindWOVTaskByDescription(string strTaskDescription)
+        {
+            try
+            {
+                aFindWOVTaskByDescriptionDataSet = new FindWOVTaskByDescriptionDataSet();
+                aFindWOVTaskByDescriptionTableAdapter = new FindWOVTaskByDescriptionDataSetTableAdapters.FindWOVTaskByDescriptionTableAdapter();
+                aFindWOVTaskByDescriptionTableAdapter.Fill(aFindWOVTaskByDescriptionDataSet.FindWOVTaskByDescription, strTaskDescription);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "WOV Invoicing Class // Find WOV Task By Description " + Ex.Message);
+            }
+
+            return aFindWOVTaskByDescriptionDataSet;
+        }
         public FindWOVTaskByOfficeIDandDescriptionDataSet FindWOVTaskByOfficeIDAndDescription(int intOfficeID, string strWOVTaskDescription)
         {
             try

@@ -109,6 +109,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindWOVInvoicingItemsByProjectIdentificationIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindWOVTaskByDescriptionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWOVTaskByDescriptionDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindWOVTaskByOfficeIDandDescriptionDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -321,6 +326,17 @@
     </None>
     <None Include="FindWOVInvoicingItemsByProjectIdentificationIDDataSet.xss">
       <DependentUpon>FindWOVInvoicingItemsByProjectIdentificationIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVTaskByDescriptionDataSet.xsc">
+      <DependentUpon>FindWOVTaskByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVTaskByDescriptionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWOVTaskByDescriptionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWOVTaskByDescriptionDataSet.xss">
+      <DependentUpon>FindWOVTaskByDescriptionDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindWOVTaskByOfficeIDandDescriptionDataSet.xsc">
       <DependentUpon>FindWOVTaskByOfficeIDandDescriptionDataSet.xsd</DependentUpon>
