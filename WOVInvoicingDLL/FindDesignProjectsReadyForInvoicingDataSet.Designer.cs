@@ -281,6 +281,8 @@ namespace WOVInvoicingDLL {
             
             private global::System.Data.DataColumn columnTransactionDate;
             
+            private global::System.Data.DataColumn columnProjectID;
+            
             private global::System.Data.DataColumn columnAssignedProjectID;
             
             private global::System.Data.DataColumn columnProjectName;
@@ -343,6 +345,14 @@ namespace WOVInvoicingDLL {
             public global::System.Data.DataColumn TransactionDateColumn {
                 get {
                     return this.columnTransactionDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ProjectIDColumn {
+                get {
+                    return this.columnProjectID;
                 }
             }
             
@@ -479,10 +489,11 @@ namespace WOVInvoicingDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindDesignProjectsReadyForInvoicingRow AddFindDesignProjectsReadyForInvoicingRow(System.DateTime TransactionDate, string AssignedProjectID, string ProjectName, string ProjectAddress, string City, string State, string ZipCode, string AssignedOffice, string TechPayCode, string JobDescription, decimal TechPayPrice, int Quantity, decimal TotalTechPayPrice) {
+            public FindDesignProjectsReadyForInvoicingRow AddFindDesignProjectsReadyForInvoicingRow(System.DateTime TransactionDate, int ProjectID, string AssignedProjectID, string ProjectName, string ProjectAddress, string City, string State, string ZipCode, string AssignedOffice, string TechPayCode, string JobDescription, decimal TechPayPrice, int Quantity, decimal TotalTechPayPrice) {
                 FindDesignProjectsReadyForInvoicingRow rowFindDesignProjectsReadyForInvoicingRow = ((FindDesignProjectsReadyForInvoicingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TransactionDate,
+                        ProjectID,
                         AssignedProjectID,
                         ProjectName,
                         ProjectAddress,
@@ -518,6 +529,7 @@ namespace WOVInvoicingDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnTransactionDate = base.Columns["TransactionDate"];
+                this.columnProjectID = base.Columns["ProjectID"];
                 this.columnAssignedProjectID = base.Columns["AssignedProjectID"];
                 this.columnProjectName = base.Columns["ProjectName"];
                 this.columnProjectAddress = base.Columns["ProjectAddress"];
@@ -537,6 +549,8 @@ namespace WOVInvoicingDLL {
             private void InitClass() {
                 this.columnTransactionDate = new global::System.Data.DataColumn("TransactionDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTransactionDate);
+                this.columnProjectID = new global::System.Data.DataColumn("ProjectID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProjectID);
                 this.columnAssignedProjectID = new global::System.Data.DataColumn("AssignedProjectID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAssignedProjectID);
                 this.columnProjectName = new global::System.Data.DataColumn("ProjectName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -562,6 +576,7 @@ namespace WOVInvoicingDLL {
                 this.columnTotalTechPayPrice = new global::System.Data.DataColumn("TotalTechPayPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalTechPayPrice);
                 this.columnTransactionDate.AllowDBNull = false;
+                this.columnProjectID.AllowDBNull = false;
                 this.columnAssignedProjectID.AllowDBNull = false;
                 this.columnAssignedProjectID.MaxLength = 2147483647;
                 this.columnProjectName.AllowDBNull = false;
@@ -729,6 +744,17 @@ namespace WOVInvoicingDLL {
                 }
                 set {
                     this[this.tableFindDesignProjectsReadyForInvoicing.TransactionDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int ProjectID {
+                get {
+                    return ((int)(this[this.tableFindDesignProjectsReadyForInvoicing.ProjectIDColumn]));
+                }
+                set {
+                    this[this.tableFindDesignProjectsReadyForInvoicing.ProjectIDColumn] = value;
                 }
             }
             
@@ -1061,6 +1087,7 @@ namespace WOVInvoicingDLL.FindDesignProjectsReadyForInvoicingDataSetTableAdapter
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "FindDesignProjectsReadyForInvoicing";
             tableMapping.ColumnMappings.Add("TransactionDate", "TransactionDate");
+            tableMapping.ColumnMappings.Add("ProjectID", "ProjectID");
             tableMapping.ColumnMappings.Add("AssignedProjectID", "AssignedProjectID");
             tableMapping.ColumnMappings.Add("ProjectName", "ProjectName");
             tableMapping.ColumnMappings.Add("ProjectAddress", "ProjectAddress");
