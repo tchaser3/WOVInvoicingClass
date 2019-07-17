@@ -89,6 +89,24 @@ namespace WOVInvoicingDLL
         FindWOVTaskByDescriptionDataSet aFindWOVTaskByDescriptionDataSet;
         FindWOVTaskByDescriptionDataSetTableAdapters.FindWOVTaskByDescriptionTableAdapter aFindWOVTaskByDescriptionTableAdapter;
 
+        FindDesignProjectsReadyForInvoicingDataSet aFindDesignProjectsReadyForInvoicingDataSet;
+        FindDesignProjectsReadyForInvoicingDataSetTableAdapters.FindDesignProjectsReadyForInvoicingTableAdapter aFindDesignProjectsReadyForInvoicingTableAdapter;
+
+        public FindDesignProjectsReadyForInvoicingDataSet FindDesignProjectsForInvoicing()
+        {
+            try
+            {
+                aFindDesignProjectsReadyForInvoicingDataSet = new FindDesignProjectsReadyForInvoicingDataSet();
+                aFindDesignProjectsReadyForInvoicingTableAdapter = new FindDesignProjectsReadyForInvoicingDataSetTableAdapters.FindDesignProjectsReadyForInvoicingTableAdapter();
+                aFindDesignProjectsReadyForInvoicingTableAdapter.Fill(aFindDesignProjectsReadyForInvoicingDataSet.FindDesignProjectsReadyForInvoicing);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "WOV Invoicing Class // Find Design Project For Invoicing " + Ex.Message);
+            }
+
+            return aFindDesignProjectsReadyForInvoicingDataSet;
+        }
         public FindWOVTaskByDescriptionDataSet FindWOVTaskByDescription(string strTaskDescription)
         {
             try
