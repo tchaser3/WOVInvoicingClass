@@ -22,7 +22,6 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="TransactionDate" DataSetColumn="TransactionDate" />
-              <Mapping SourceColumn="ProjectID" DataSetColumn="ProjectID" />
               <Mapping SourceColumn="AssignedProjectID" DataSetColumn="AssignedProjectID" />
               <Mapping SourceColumn="ProjectName" DataSetColumn="ProjectName" />
               <Mapping SourceColumn="ProjectAddress" DataSetColumn="ProjectAddress" />
@@ -35,9 +34,6 @@
               <Mapping SourceColumn="TechPayPrice" DataSetColumn="TechPayPrice" />
               <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
               <Mapping SourceColumn="TotalTechPayPrice" DataSetColumn="TotalTechPayPrice" />
-              <Mapping SourceColumn="BillingID" DataSetColumn="BillingID" />
-              <Mapping SourceColumn="BillingCode" DataSetColumn="BillingCode" />
-              <Mapping SourceColumn="BillingDescription" DataSetColumn="BillingDescription" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -49,11 +45,10 @@
   <xs:element name="FindDesignProjectsReadyForInvoicingDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindDesignProjectsReadyForInvoicingDataSet" msprop:Generator_UserDSName="FindDesignProjectsReadyForInvoicingDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindDesignProjectsReadyForInvoicing" msprop:Generator_TableClassName="FindDesignProjectsReadyForInvoicingDataTable" msprop:Generator_TableVarName="tableFindDesignProjectsReadyForInvoicing" msprop:Generator_RowChangedName="FindDesignProjectsReadyForInvoicingRowChanged" msprop:Generator_TablePropName="FindDesignProjectsReadyForInvoicing" msprop:Generator_RowDeletingName="FindDesignProjectsReadyForInvoicingRowDeleting" msprop:Generator_RowChangingName="FindDesignProjectsReadyForInvoicingRowChanging" msprop:Generator_RowEvHandlerName="FindDesignProjectsReadyForInvoicingRowChangeEventHandler" msprop:Generator_RowDeletedName="FindDesignProjectsReadyForInvoicingRowDeleted" msprop:Generator_RowClassName="FindDesignProjectsReadyForInvoicingRow" msprop:Generator_UserTableName="FindDesignProjectsReadyForInvoicing" msprop:Generator_RowEvArgName="FindDesignProjectsReadyForInvoicingRowChangeEvent">
+        <xs:element name="FindDesignProjectsReadyForInvoicing" msprop:Generator_TableClassName="FindDesignProjectsReadyForInvoicingDataTable" msprop:Generator_TableVarName="tableFindDesignProjectsReadyForInvoicing" msprop:Generator_TablePropName="FindDesignProjectsReadyForInvoicing" msprop:Generator_RowDeletingName="FindDesignProjectsReadyForInvoicingRowDeleting" msprop:Generator_RowChangingName="FindDesignProjectsReadyForInvoicingRowChanging" msprop:Generator_RowEvHandlerName="FindDesignProjectsReadyForInvoicingRowChangeEventHandler" msprop:Generator_RowDeletedName="FindDesignProjectsReadyForInvoicingRowDeleted" msprop:Generator_UserTableName="FindDesignProjectsReadyForInvoicing" msprop:Generator_RowChangedName="FindDesignProjectsReadyForInvoicingRowChanged" msprop:Generator_RowEvArgName="FindDesignProjectsReadyForInvoicingRowChangeEvent" msprop:Generator_RowClassName="FindDesignProjectsReadyForInvoicingRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TransactionDate" msprop:Generator_ColumnVarNameInTable="columnTransactionDate" msprop:Generator_ColumnPropNameInRow="TransactionDate" msprop:Generator_ColumnPropNameInTable="TransactionDateColumn" msprop:Generator_UserColumnName="TransactionDate" type="xs:dateTime" />
-              <xs:element name="ProjectID" msprop:Generator_ColumnVarNameInTable="columnProjectID" msprop:Generator_ColumnPropNameInRow="ProjectID" msprop:Generator_ColumnPropNameInTable="ProjectIDColumn" msprop:Generator_UserColumnName="ProjectID" type="xs:int" />
               <xs:element name="AssignedProjectID" msprop:Generator_ColumnVarNameInTable="columnAssignedProjectID" msprop:Generator_ColumnPropNameInRow="AssignedProjectID" msprop:Generator_ColumnPropNameInTable="AssignedProjectIDColumn" msprop:Generator_UserColumnName="AssignedProjectID">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -120,21 +115,6 @@
               <xs:element name="TechPayPrice" msprop:Generator_ColumnVarNameInTable="columnTechPayPrice" msprop:Generator_ColumnPropNameInRow="TechPayPrice" msprop:Generator_ColumnPropNameInTable="TechPayPriceColumn" msprop:Generator_UserColumnName="TechPayPrice" type="xs:decimal" />
               <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:int" />
               <xs:element name="TotalTechPayPrice" msprop:Generator_ColumnVarNameInTable="columnTotalTechPayPrice" msprop:Generator_ColumnPropNameInRow="TotalTechPayPrice" msprop:Generator_ColumnPropNameInTable="TotalTechPayPriceColumn" msprop:Generator_UserColumnName="TotalTechPayPrice" type="xs:decimal" />
-              <xs:element name="BillingID" msprop:Generator_ColumnVarNameInTable="columnBillingID" msprop:Generator_ColumnPropNameInRow="BillingID" msprop:Generator_ColumnPropNameInTable="BillingIDColumn" msprop:Generator_UserColumnName="BillingID" type="xs:int" minOccurs="0" />
-              <xs:element name="BillingCode" msprop:Generator_ColumnVarNameInTable="columnBillingCode" msprop:Generator_ColumnPropNameInRow="BillingCode" msprop:Generator_ColumnPropNameInTable="BillingCodeColumn" msprop:Generator_UserColumnName="BillingCode">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="2147483647" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="BillingDescription" msprop:Generator_ColumnVarNameInTable="columnBillingDescription" msprop:Generator_ColumnPropNameInRow="BillingDescription" msprop:Generator_ColumnPropNameInTable="BillingDescriptionColumn" msprop:Generator_UserColumnName="BillingDescription">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="2147483647" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

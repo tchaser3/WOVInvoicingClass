@@ -20,17 +20,17 @@ namespace WOVInvoicingDLL {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("FindDesignProjectsReadyForInvoicingDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class FindDesignProjectsReadyForInvoicingDataSet : global::System.Data.DataSet {
+    public partial class FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet : global::System.Data.DataSet {
         
-        private FindDesignProjectsReadyForInvoicingDataTable tableFindDesignProjectsReadyForInvoicing;
+        private FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable tableFindDesignProjectsForInvoicingByOfficeBillingCode;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public FindDesignProjectsReadyForInvoicingDataSet() {
+        public FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WOVInvoicingDLL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected FindDesignProjectsReadyForInvoicingDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace WOVInvoicingDLL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["FindDesignProjectsReadyForInvoicing"] != null)) {
-                    base.Tables.Add(new FindDesignProjectsReadyForInvoicingDataTable(ds.Tables["FindDesignProjectsReadyForInvoicing"]));
+                if ((ds.Tables["FindDesignProjectsForInvoicingByOfficeBillingCode"] != null)) {
+                    base.Tables.Add(new FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable(ds.Tables["FindDesignProjectsForInvoicingByOfficeBillingCode"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace WOVInvoicingDLL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public FindDesignProjectsReadyForInvoicingDataTable FindDesignProjectsReadyForInvoicing {
+        public FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable FindDesignProjectsForInvoicingByOfficeBillingCode {
             get {
-                return this.tableFindDesignProjectsReadyForInvoicing;
+                return this.tableFindDesignProjectsForInvoicingByOfficeBillingCode;
             }
         }
         
@@ -127,7 +127,7 @@ namespace WOVInvoicingDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            FindDesignProjectsReadyForInvoicingDataSet cln = ((FindDesignProjectsReadyForInvoicingDataSet)(base.Clone()));
+            FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet cln = ((FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace WOVInvoicingDLL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["FindDesignProjectsReadyForInvoicing"] != null)) {
-                    base.Tables.Add(new FindDesignProjectsReadyForInvoicingDataTable(ds.Tables["FindDesignProjectsReadyForInvoicing"]));
+                if ((ds.Tables["FindDesignProjectsForInvoicingByOfficeBillingCode"] != null)) {
+                    base.Tables.Add(new FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable(ds.Tables["FindDesignProjectsForInvoicingByOfficeBillingCode"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace WOVInvoicingDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableFindDesignProjectsReadyForInvoicing = ((FindDesignProjectsReadyForInvoicingDataTable)(base.Tables["FindDesignProjectsReadyForInvoicing"]));
+            this.tableFindDesignProjectsForInvoicingByOfficeBillingCode = ((FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable)(base.Tables["FindDesignProjectsForInvoicingByOfficeBillingCode"]));
             if ((initTable == true)) {
-                if ((this.tableFindDesignProjectsReadyForInvoicing != null)) {
-                    this.tableFindDesignProjectsReadyForInvoicing.InitVars();
+                if ((this.tableFindDesignProjectsForInvoicingByOfficeBillingCode != null)) {
+                    this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace WOVInvoicingDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "FindDesignProjectsReadyForInvoicingDataSet";
+            this.DataSetName = "FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/FindDesignProjectsReadyForInvoicingDataSet.xsd";
+            this.Namespace = "http://tempuri.org/FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableFindDesignProjectsReadyForInvoicing = new FindDesignProjectsReadyForInvoicingDataTable();
-            base.Tables.Add(this.tableFindDesignProjectsReadyForInvoicing);
+            this.tableFindDesignProjectsForInvoicingByOfficeBillingCode = new FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable();
+            base.Tables.Add(this.tableFindDesignProjectsForInvoicingByOfficeBillingCode);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeFindDesignProjectsReadyForInvoicing() {
+        private bool ShouldSerializeFindDesignProjectsForInvoicingByOfficeBillingCode() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace WOVInvoicingDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            FindDesignProjectsReadyForInvoicingDataSet ds = new FindDesignProjectsReadyForInvoicingDataSet();
+            FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet ds = new FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,16 +270,20 @@ namespace WOVInvoicingDLL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void FindDesignProjectsReadyForInvoicingRowChangeEventHandler(object sender, FindDesignProjectsReadyForInvoicingRowChangeEvent e);
+        public delegate void FindDesignProjectsForInvoicingByOfficeBillingCodeRowChangeEventHandler(object sender, FindDesignProjectsForInvoicingByOfficeBillingCodeRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class FindDesignProjectsReadyForInvoicingDataTable : global::System.Data.TypedTableBase<FindDesignProjectsReadyForInvoicingRow> {
+        public partial class FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable : global::System.Data.TypedTableBase<FindDesignProjectsForInvoicingByOfficeBillingCodeRow> {
             
-            private global::System.Data.DataColumn columnTransactionDate;
+            private global::System.Data.DataColumn columnTransactionID;
+            
+            private global::System.Data.DataColumn columnProjectID;
+            
+            private global::System.Data.DataColumn columnDateReceived;
             
             private global::System.Data.DataColumn columnAssignedProjectID;
             
@@ -289,26 +293,14 @@ namespace WOVInvoicingDLL {
             
             private global::System.Data.DataColumn columnCity;
             
-            private global::System.Data.DataColumn columnState;
-            
-            private global::System.Data.DataColumn columnZipCode;
+            private global::System.Data.DataColumn columnJobStatus;
             
             private global::System.Data.DataColumn columnAssignedOffice;
             
-            private global::System.Data.DataColumn columnTechPayCode;
-            
-            private global::System.Data.DataColumn columnJobDescription;
-            
-            private global::System.Data.DataColumn columnTechPayPrice;
-            
-            private global::System.Data.DataColumn columnQuantity;
-            
-            private global::System.Data.DataColumn columnTotalTechPayPrice;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindDesignProjectsReadyForInvoicingDataTable() {
-                this.TableName = "FindDesignProjectsReadyForInvoicing";
+            public FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable() {
+                this.TableName = "FindDesignProjectsForInvoicingByOfficeBillingCode";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -316,7 +308,7 @@ namespace WOVInvoicingDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal FindDesignProjectsReadyForInvoicingDataTable(global::System.Data.DataTable table) {
+            internal FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -333,16 +325,32 @@ namespace WOVInvoicingDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected FindDesignProjectsReadyForInvoicingDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TransactionDateColumn {
+            public global::System.Data.DataColumn TransactionIDColumn {
                 get {
-                    return this.columnTransactionDate;
+                    return this.columnTransactionID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ProjectIDColumn {
+                get {
+                    return this.columnProjectID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DateReceivedColumn {
+                get {
+                    return this.columnDateReceived;
                 }
             }
             
@@ -380,17 +388,9 @@ namespace WOVInvoicingDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn StateColumn {
+            public global::System.Data.DataColumn JobStatusColumn {
                 get {
-                    return this.columnState;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ZipCodeColumn {
-                get {
-                    return this.columnZipCode;
+                    return this.columnJobStatus;
                 }
             }
             
@@ -399,46 +399,6 @@ namespace WOVInvoicingDLL {
             public global::System.Data.DataColumn AssignedOfficeColumn {
                 get {
                     return this.columnAssignedOffice;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TechPayCodeColumn {
-                get {
-                    return this.columnTechPayCode;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn JobDescriptionColumn {
-                get {
-                    return this.columnJobDescription;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TechPayPriceColumn {
-                get {
-                    return this.columnTechPayPrice;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn QuantityColumn {
-                get {
-                    return this.columnQuantity;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TotalTechPayPriceColumn {
-                get {
-                    return this.columnTotalTechPayPrice;
                 }
             }
             
@@ -453,57 +413,60 @@ namespace WOVInvoicingDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindDesignProjectsReadyForInvoicingRow this[int index] {
+            public FindDesignProjectsForInvoicingByOfficeBillingCodeRow this[int index] {
                 get {
-                    return ((FindDesignProjectsReadyForInvoicingRow)(this.Rows[index]));
+                    return ((FindDesignProjectsForInvoicingByOfficeBillingCodeRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindDesignProjectsReadyForInvoicingRowChangeEventHandler FindDesignProjectsReadyForInvoicingRowChanging;
+            public event FindDesignProjectsForInvoicingByOfficeBillingCodeRowChangeEventHandler FindDesignProjectsForInvoicingByOfficeBillingCodeRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindDesignProjectsReadyForInvoicingRowChangeEventHandler FindDesignProjectsReadyForInvoicingRowChanged;
+            public event FindDesignProjectsForInvoicingByOfficeBillingCodeRowChangeEventHandler FindDesignProjectsForInvoicingByOfficeBillingCodeRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindDesignProjectsReadyForInvoicingRowChangeEventHandler FindDesignProjectsReadyForInvoicingRowDeleting;
+            public event FindDesignProjectsForInvoicingByOfficeBillingCodeRowChangeEventHandler FindDesignProjectsForInvoicingByOfficeBillingCodeRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindDesignProjectsReadyForInvoicingRowChangeEventHandler FindDesignProjectsReadyForInvoicingRowDeleted;
+            public event FindDesignProjectsForInvoicingByOfficeBillingCodeRowChangeEventHandler FindDesignProjectsForInvoicingByOfficeBillingCodeRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddFindDesignProjectsReadyForInvoicingRow(FindDesignProjectsReadyForInvoicingRow row) {
+            public void AddFindDesignProjectsForInvoicingByOfficeBillingCodeRow(FindDesignProjectsForInvoicingByOfficeBillingCodeRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindDesignProjectsReadyForInvoicingRow AddFindDesignProjectsReadyForInvoicingRow(System.DateTime TransactionDate, string AssignedProjectID, string ProjectName, string ProjectAddress, string City, string State, string ZipCode, string AssignedOffice, string TechPayCode, string JobDescription, decimal TechPayPrice, int Quantity, decimal TotalTechPayPrice) {
-                FindDesignProjectsReadyForInvoicingRow rowFindDesignProjectsReadyForInvoicingRow = ((FindDesignProjectsReadyForInvoicingRow)(this.NewRow()));
+            public FindDesignProjectsForInvoicingByOfficeBillingCodeRow AddFindDesignProjectsForInvoicingByOfficeBillingCodeRow(int TransactionID, int ProjectID, System.DateTime DateReceived, string AssignedProjectID, string ProjectName, string ProjectAddress, string City, string JobStatus, string AssignedOffice) {
+                FindDesignProjectsForInvoicingByOfficeBillingCodeRow rowFindDesignProjectsForInvoicingByOfficeBillingCodeRow = ((FindDesignProjectsForInvoicingByOfficeBillingCodeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        TransactionDate,
+                        TransactionID,
+                        ProjectID,
+                        DateReceived,
                         AssignedProjectID,
                         ProjectName,
                         ProjectAddress,
                         City,
-                        State,
-                        ZipCode,
-                        AssignedOffice,
-                        TechPayCode,
-                        JobDescription,
-                        TechPayPrice,
-                        Quantity,
-                        TotalTechPayPrice};
-                rowFindDesignProjectsReadyForInvoicingRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowFindDesignProjectsReadyForInvoicingRow);
-                return rowFindDesignProjectsReadyForInvoicingRow;
+                        JobStatus,
+                        AssignedOffice};
+                rowFindDesignProjectsForInvoicingByOfficeBillingCodeRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFindDesignProjectsForInvoicingByOfficeBillingCodeRow);
+                return rowFindDesignProjectsForInvoicingByOfficeBillingCodeRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FindDesignProjectsForInvoicingByOfficeBillingCodeRow FindByTransactionID(int TransactionID) {
+                return ((FindDesignProjectsForInvoicingByOfficeBillingCodeRow)(this.Rows.Find(new object[] {
+                            TransactionID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                FindDesignProjectsReadyForInvoicingDataTable cln = ((FindDesignProjectsReadyForInvoicingDataTable)(base.Clone()));
+                FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable cln = ((FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -511,32 +474,32 @@ namespace WOVInvoicingDLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new FindDesignProjectsReadyForInvoicingDataTable();
+                return new FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnTransactionDate = base.Columns["TransactionDate"];
+                this.columnTransactionID = base.Columns["TransactionID"];
+                this.columnProjectID = base.Columns["ProjectID"];
+                this.columnDateReceived = base.Columns["DateReceived"];
                 this.columnAssignedProjectID = base.Columns["AssignedProjectID"];
                 this.columnProjectName = base.Columns["ProjectName"];
                 this.columnProjectAddress = base.Columns["ProjectAddress"];
                 this.columnCity = base.Columns["City"];
-                this.columnState = base.Columns["State"];
-                this.columnZipCode = base.Columns["ZipCode"];
+                this.columnJobStatus = base.Columns["JobStatus"];
                 this.columnAssignedOffice = base.Columns["AssignedOffice"];
-                this.columnTechPayCode = base.Columns["TechPayCode"];
-                this.columnJobDescription = base.Columns["JobDescription"];
-                this.columnTechPayPrice = base.Columns["TechPayPrice"];
-                this.columnQuantity = base.Columns["Quantity"];
-                this.columnTotalTechPayPrice = base.Columns["TotalTechPayPrice"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnTransactionDate = new global::System.Data.DataColumn("TransactionDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransactionDate);
+                this.columnTransactionID = new global::System.Data.DataColumn("TransactionID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransactionID);
+                this.columnProjectID = new global::System.Data.DataColumn("ProjectID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProjectID);
+                this.columnDateReceived = new global::System.Data.DataColumn("DateReceived", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateReceived);
                 this.columnAssignedProjectID = new global::System.Data.DataColumn("AssignedProjectID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAssignedProjectID);
                 this.columnProjectName = new global::System.Data.DataColumn("ProjectName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -545,23 +508,16 @@ namespace WOVInvoicingDLL {
                 base.Columns.Add(this.columnProjectAddress);
                 this.columnCity = new global::System.Data.DataColumn("City", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCity);
-                this.columnState = new global::System.Data.DataColumn("State", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnState);
-                this.columnZipCode = new global::System.Data.DataColumn("ZipCode", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnZipCode);
+                this.columnJobStatus = new global::System.Data.DataColumn("JobStatus", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJobStatus);
                 this.columnAssignedOffice = new global::System.Data.DataColumn("AssignedOffice", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAssignedOffice);
-                this.columnTechPayCode = new global::System.Data.DataColumn("TechPayCode", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTechPayCode);
-                this.columnJobDescription = new global::System.Data.DataColumn("JobDescription", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnJobDescription);
-                this.columnTechPayPrice = new global::System.Data.DataColumn("TechPayPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTechPayPrice);
-                this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQuantity);
-                this.columnTotalTechPayPrice = new global::System.Data.DataColumn("TotalTechPayPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotalTechPayPrice);
-                this.columnTransactionDate.AllowDBNull = false;
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTransactionID}, true));
+                this.columnTransactionID.AllowDBNull = false;
+                this.columnTransactionID.Unique = true;
+                this.columnProjectID.AllowDBNull = false;
+                this.columnDateReceived.AllowDBNull = false;
                 this.columnAssignedProjectID.AllowDBNull = false;
                 this.columnAssignedProjectID.MaxLength = 2147483647;
                 this.columnProjectName.AllowDBNull = false;
@@ -570,43 +526,36 @@ namespace WOVInvoicingDLL {
                 this.columnProjectAddress.MaxLength = 2147483647;
                 this.columnCity.AllowDBNull = false;
                 this.columnCity.MaxLength = 2147483647;
-                this.columnState.MaxLength = 2147483647;
-                this.columnZipCode.MaxLength = 2147483647;
+                this.columnJobStatus.AllowDBNull = false;
+                this.columnJobStatus.MaxLength = 2147483647;
                 this.columnAssignedOffice.AllowDBNull = false;
                 this.columnAssignedOffice.MaxLength = 2147483647;
-                this.columnTechPayCode.AllowDBNull = false;
-                this.columnTechPayCode.MaxLength = 2147483647;
-                this.columnJobDescription.AllowDBNull = false;
-                this.columnJobDescription.MaxLength = 2147483647;
-                this.columnTechPayPrice.AllowDBNull = false;
-                this.columnQuantity.AllowDBNull = false;
-                this.columnTotalTechPayPrice.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindDesignProjectsReadyForInvoicingRow NewFindDesignProjectsReadyForInvoicingRow() {
-                return ((FindDesignProjectsReadyForInvoicingRow)(this.NewRow()));
+            public FindDesignProjectsForInvoicingByOfficeBillingCodeRow NewFindDesignProjectsForInvoicingByOfficeBillingCodeRow() {
+                return ((FindDesignProjectsForInvoicingByOfficeBillingCodeRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new FindDesignProjectsReadyForInvoicingRow(builder);
+                return new FindDesignProjectsForInvoicingByOfficeBillingCodeRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(FindDesignProjectsReadyForInvoicingRow);
+                return typeof(FindDesignProjectsForInvoicingByOfficeBillingCodeRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.FindDesignProjectsReadyForInvoicingRowChanged != null)) {
-                    this.FindDesignProjectsReadyForInvoicingRowChanged(this, new FindDesignProjectsReadyForInvoicingRowChangeEvent(((FindDesignProjectsReadyForInvoicingRow)(e.Row)), e.Action));
+                if ((this.FindDesignProjectsForInvoicingByOfficeBillingCodeRowChanged != null)) {
+                    this.FindDesignProjectsForInvoicingByOfficeBillingCodeRowChanged(this, new FindDesignProjectsForInvoicingByOfficeBillingCodeRowChangeEvent(((FindDesignProjectsForInvoicingByOfficeBillingCodeRow)(e.Row)), e.Action));
                 }
             }
             
@@ -614,8 +563,8 @@ namespace WOVInvoicingDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.FindDesignProjectsReadyForInvoicingRowChanging != null)) {
-                    this.FindDesignProjectsReadyForInvoicingRowChanging(this, new FindDesignProjectsReadyForInvoicingRowChangeEvent(((FindDesignProjectsReadyForInvoicingRow)(e.Row)), e.Action));
+                if ((this.FindDesignProjectsForInvoicingByOfficeBillingCodeRowChanging != null)) {
+                    this.FindDesignProjectsForInvoicingByOfficeBillingCodeRowChanging(this, new FindDesignProjectsForInvoicingByOfficeBillingCodeRowChangeEvent(((FindDesignProjectsForInvoicingByOfficeBillingCodeRow)(e.Row)), e.Action));
                 }
             }
             
@@ -623,8 +572,8 @@ namespace WOVInvoicingDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.FindDesignProjectsReadyForInvoicingRowDeleted != null)) {
-                    this.FindDesignProjectsReadyForInvoicingRowDeleted(this, new FindDesignProjectsReadyForInvoicingRowChangeEvent(((FindDesignProjectsReadyForInvoicingRow)(e.Row)), e.Action));
+                if ((this.FindDesignProjectsForInvoicingByOfficeBillingCodeRowDeleted != null)) {
+                    this.FindDesignProjectsForInvoicingByOfficeBillingCodeRowDeleted(this, new FindDesignProjectsForInvoicingByOfficeBillingCodeRowChangeEvent(((FindDesignProjectsForInvoicingByOfficeBillingCodeRow)(e.Row)), e.Action));
                 }
             }
             
@@ -632,14 +581,14 @@ namespace WOVInvoicingDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.FindDesignProjectsReadyForInvoicingRowDeleting != null)) {
-                    this.FindDesignProjectsReadyForInvoicingRowDeleting(this, new FindDesignProjectsReadyForInvoicingRowChangeEvent(((FindDesignProjectsReadyForInvoicingRow)(e.Row)), e.Action));
+                if ((this.FindDesignProjectsForInvoicingByOfficeBillingCodeRowDeleting != null)) {
+                    this.FindDesignProjectsForInvoicingByOfficeBillingCodeRowDeleting(this, new FindDesignProjectsForInvoicingByOfficeBillingCodeRowChangeEvent(((FindDesignProjectsForInvoicingByOfficeBillingCodeRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveFindDesignProjectsReadyForInvoicingRow(FindDesignProjectsReadyForInvoicingRow row) {
+            public void RemoveFindDesignProjectsForInvoicingByOfficeBillingCodeRow(FindDesignProjectsForInvoicingByOfficeBillingCodeRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -648,7 +597,7 @@ namespace WOVInvoicingDLL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FindDesignProjectsReadyForInvoicingDataSet ds = new FindDesignProjectsReadyForInvoicingDataSet();
+                FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet ds = new FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -666,7 +615,7 @@ namespace WOVInvoicingDLL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "FindDesignProjectsReadyForInvoicingDataTable";
+                attribute2.FixedValue = "FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -710,25 +659,47 @@ namespace WOVInvoicingDLL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class FindDesignProjectsReadyForInvoicingRow : global::System.Data.DataRow {
+        public partial class FindDesignProjectsForInvoicingByOfficeBillingCodeRow : global::System.Data.DataRow {
             
-            private FindDesignProjectsReadyForInvoicingDataTable tableFindDesignProjectsReadyForInvoicing;
+            private FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable tableFindDesignProjectsForInvoicingByOfficeBillingCode;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal FindDesignProjectsReadyForInvoicingRow(global::System.Data.DataRowBuilder rb) : 
+            internal FindDesignProjectsForInvoicingByOfficeBillingCodeRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableFindDesignProjectsReadyForInvoicing = ((FindDesignProjectsReadyForInvoicingDataTable)(this.Table));
+                this.tableFindDesignProjectsForInvoicingByOfficeBillingCode = ((FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime TransactionDate {
+            public int TransactionID {
                 get {
-                    return ((global::System.DateTime)(this[this.tableFindDesignProjectsReadyForInvoicing.TransactionDateColumn]));
+                    return ((int)(this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.TransactionIDColumn]));
                 }
                 set {
-                    this[this.tableFindDesignProjectsReadyForInvoicing.TransactionDateColumn] = value;
+                    this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.TransactionIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int ProjectID {
+                get {
+                    return ((int)(this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.ProjectIDColumn]));
+                }
+                set {
+                    this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.ProjectIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime DateReceived {
+                get {
+                    return ((global::System.DateTime)(this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.DateReceivedColumn]));
+                }
+                set {
+                    this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.DateReceivedColumn] = value;
                 }
             }
             
@@ -736,10 +707,10 @@ namespace WOVInvoicingDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string AssignedProjectID {
                 get {
-                    return ((string)(this[this.tableFindDesignProjectsReadyForInvoicing.AssignedProjectIDColumn]));
+                    return ((string)(this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.AssignedProjectIDColumn]));
                 }
                 set {
-                    this[this.tableFindDesignProjectsReadyForInvoicing.AssignedProjectIDColumn] = value;
+                    this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.AssignedProjectIDColumn] = value;
                 }
             }
             
@@ -747,10 +718,10 @@ namespace WOVInvoicingDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ProjectName {
                 get {
-                    return ((string)(this[this.tableFindDesignProjectsReadyForInvoicing.ProjectNameColumn]));
+                    return ((string)(this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.ProjectNameColumn]));
                 }
                 set {
-                    this[this.tableFindDesignProjectsReadyForInvoicing.ProjectNameColumn] = value;
+                    this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.ProjectNameColumn] = value;
                 }
             }
             
@@ -758,10 +729,10 @@ namespace WOVInvoicingDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ProjectAddress {
                 get {
-                    return ((string)(this[this.tableFindDesignProjectsReadyForInvoicing.ProjectAddressColumn]));
+                    return ((string)(this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.ProjectAddressColumn]));
                 }
                 set {
-                    this[this.tableFindDesignProjectsReadyForInvoicing.ProjectAddressColumn] = value;
+                    this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.ProjectAddressColumn] = value;
                 }
             }
             
@@ -769,44 +740,21 @@ namespace WOVInvoicingDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string City {
                 get {
-                    return ((string)(this[this.tableFindDesignProjectsReadyForInvoicing.CityColumn]));
+                    return ((string)(this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.CityColumn]));
                 }
                 set {
-                    this[this.tableFindDesignProjectsReadyForInvoicing.CityColumn] = value;
+                    this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.CityColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string State {
+            public string JobStatus {
                 get {
-                    try {
-                        return ((string)(this[this.tableFindDesignProjectsReadyForInvoicing.StateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'State\' in table \'FindDesignProjectsReadyForInvoicing\' is DB" +
-                                "Null.", e);
-                    }
+                    return ((string)(this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.JobStatusColumn]));
                 }
                 set {
-                    this[this.tableFindDesignProjectsReadyForInvoicing.StateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string ZipCode {
-                get {
-                    try {
-                        return ((string)(this[this.tableFindDesignProjectsReadyForInvoicing.ZipCodeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ZipCode\' in table \'FindDesignProjectsReadyForInvoicing\' is " +
-                                "DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFindDesignProjectsReadyForInvoicing.ZipCodeColumn] = value;
+                    this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.JobStatusColumn] = value;
                 }
             }
             
@@ -814,90 +762,11 @@ namespace WOVInvoicingDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string AssignedOffice {
                 get {
-                    return ((string)(this[this.tableFindDesignProjectsReadyForInvoicing.AssignedOfficeColumn]));
+                    return ((string)(this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.AssignedOfficeColumn]));
                 }
                 set {
-                    this[this.tableFindDesignProjectsReadyForInvoicing.AssignedOfficeColumn] = value;
+                    this[this.tableFindDesignProjectsForInvoicingByOfficeBillingCode.AssignedOfficeColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string TechPayCode {
-                get {
-                    return ((string)(this[this.tableFindDesignProjectsReadyForInvoicing.TechPayCodeColumn]));
-                }
-                set {
-                    this[this.tableFindDesignProjectsReadyForInvoicing.TechPayCodeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string JobDescription {
-                get {
-                    return ((string)(this[this.tableFindDesignProjectsReadyForInvoicing.JobDescriptionColumn]));
-                }
-                set {
-                    this[this.tableFindDesignProjectsReadyForInvoicing.JobDescriptionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal TechPayPrice {
-                get {
-                    return ((decimal)(this[this.tableFindDesignProjectsReadyForInvoicing.TechPayPriceColumn]));
-                }
-                set {
-                    this[this.tableFindDesignProjectsReadyForInvoicing.TechPayPriceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Quantity {
-                get {
-                    return ((int)(this[this.tableFindDesignProjectsReadyForInvoicing.QuantityColumn]));
-                }
-                set {
-                    this[this.tableFindDesignProjectsReadyForInvoicing.QuantityColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal TotalTechPayPrice {
-                get {
-                    return ((decimal)(this[this.tableFindDesignProjectsReadyForInvoicing.TotalTechPayPriceColumn]));
-                }
-                set {
-                    this[this.tableFindDesignProjectsReadyForInvoicing.TotalTechPayPriceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsStateNull() {
-                return this.IsNull(this.tableFindDesignProjectsReadyForInvoicing.StateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetStateNull() {
-                this[this.tableFindDesignProjectsReadyForInvoicing.StateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsZipCodeNull() {
-                return this.IsNull(this.tableFindDesignProjectsReadyForInvoicing.ZipCodeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetZipCodeNull() {
-                this[this.tableFindDesignProjectsReadyForInvoicing.ZipCodeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -905,22 +774,22 @@ namespace WOVInvoicingDLL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class FindDesignProjectsReadyForInvoicingRowChangeEvent : global::System.EventArgs {
+        public class FindDesignProjectsForInvoicingByOfficeBillingCodeRowChangeEvent : global::System.EventArgs {
             
-            private FindDesignProjectsReadyForInvoicingRow eventRow;
+            private FindDesignProjectsForInvoicingByOfficeBillingCodeRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindDesignProjectsReadyForInvoicingRowChangeEvent(FindDesignProjectsReadyForInvoicingRow row, global::System.Data.DataRowAction action) {
+            public FindDesignProjectsForInvoicingByOfficeBillingCodeRowChangeEvent(FindDesignProjectsForInvoicingByOfficeBillingCodeRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindDesignProjectsReadyForInvoicingRow Row {
+            public FindDesignProjectsForInvoicingByOfficeBillingCodeRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -936,7 +805,7 @@ namespace WOVInvoicingDLL {
         }
     }
 }
-namespace WOVInvoicingDLL.FindDesignProjectsReadyForInvoicingDataSetTableAdapters {
+namespace WOVInvoicingDLL.FindDesignProjectsForInvoicingByOfficeBillingCodeDataSetTableAdapters {
     
     
     /// <summary>
@@ -948,7 +817,7 @@ namespace WOVInvoicingDLL.FindDesignProjectsReadyForInvoicingDataSetTableAdapter
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class FindDesignProjectsReadyForInvoicingTableAdapter : global::System.ComponentModel.Component {
+    public partial class FindDesignProjectsForInvoicingByOfficeBillingCodeTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -962,7 +831,7 @@ namespace WOVInvoicingDLL.FindDesignProjectsReadyForInvoicingDataSetTableAdapter
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public FindDesignProjectsReadyForInvoicingTableAdapter() {
+        public FindDesignProjectsForInvoicingByOfficeBillingCodeTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1059,20 +928,16 @@ namespace WOVInvoicingDLL.FindDesignProjectsReadyForInvoicingDataSetTableAdapter
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "FindDesignProjectsReadyForInvoicing";
-            tableMapping.ColumnMappings.Add("TransactionDate", "TransactionDate");
+            tableMapping.DataSetTable = "FindDesignProjectsForInvoicingByOfficeBillingCode";
+            tableMapping.ColumnMappings.Add("TransactionID", "TransactionID");
+            tableMapping.ColumnMappings.Add("ProjectID", "ProjectID");
+            tableMapping.ColumnMappings.Add("DateReceived", "DateReceived");
             tableMapping.ColumnMappings.Add("AssignedProjectID", "AssignedProjectID");
             tableMapping.ColumnMappings.Add("ProjectName", "ProjectName");
             tableMapping.ColumnMappings.Add("ProjectAddress", "ProjectAddress");
             tableMapping.ColumnMappings.Add("City", "City");
-            tableMapping.ColumnMappings.Add("State", "State");
-            tableMapping.ColumnMappings.Add("ZipCode", "ZipCode");
+            tableMapping.ColumnMappings.Add("JobStatus", "JobStatus");
             tableMapping.ColumnMappings.Add("AssignedOffice", "AssignedOffice");
-            tableMapping.ColumnMappings.Add("TechPayCode", "TechPayCode");
-            tableMapping.ColumnMappings.Add("JobDescription", "JobDescription");
-            tableMapping.ColumnMappings.Add("TechPayPrice", "TechPayPrice");
-            tableMapping.ColumnMappings.Add("Quantity", "Quantity");
-            tableMapping.ColumnMappings.Add("TotalTechPayPrice", "TotalTechPayPrice");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1089,17 +954,31 @@ namespace WOVInvoicingDLL.FindDesignProjectsReadyForInvoicingDataSetTableAdapter
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.FindDesignProjectsReadyForInvoicing";
+            this._commandCollection[0].CommandText = "dbo.FindDesignProjectsForInvoicingByOfficeBillingCode";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OfficeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BillingID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FindDesignProjectsReadyForInvoicingDataSet.FindDesignProjectsReadyForInvoicingDataTable dataTable) {
+        public virtual int Fill(FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet.FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable dataTable, global::System.Nullable<int> OfficeID, global::System.Nullable<int> BillingID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((OfficeID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(OfficeID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((BillingID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(BillingID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1111,9 +990,21 @@ namespace WOVInvoicingDLL.FindDesignProjectsReadyForInvoicingDataSetTableAdapter
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FindDesignProjectsReadyForInvoicingDataSet.FindDesignProjectsReadyForInvoicingDataTable GetData() {
+        public virtual FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet.FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable GetData(global::System.Nullable<int> OfficeID, global::System.Nullable<int> BillingID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            FindDesignProjectsReadyForInvoicingDataSet.FindDesignProjectsReadyForInvoicingDataTable dataTable = new FindDesignProjectsReadyForInvoicingDataSet.FindDesignProjectsReadyForInvoicingDataTable();
+            if ((OfficeID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(OfficeID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((BillingID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(BillingID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet.FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable dataTable = new FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet.FindDesignProjectsForInvoicingByOfficeBillingCodeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1187,7 +1078,7 @@ namespace WOVInvoicingDLL.FindDesignProjectsReadyForInvoicingDataSetTableAdapter
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(FindDesignProjectsReadyForInvoicingDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1197,7 +1088,7 @@ namespace WOVInvoicingDLL.FindDesignProjectsReadyForInvoicingDataSetTableAdapter
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(FindDesignProjectsReadyForInvoicingDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1207,7 +1098,7 @@ namespace WOVInvoicingDLL.FindDesignProjectsReadyForInvoicingDataSetTableAdapter
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(FindDesignProjectsReadyForInvoicingDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1241,7 +1132,7 @@ namespace WOVInvoicingDLL.FindDesignProjectsReadyForInvoicingDataSetTableAdapter
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(FindDesignProjectsReadyForInvoicingDataSet dataSet) {
+        public virtual int UpdateAll(FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

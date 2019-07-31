@@ -92,6 +92,24 @@ namespace WOVInvoicingDLL
         FindDesignProjectsReadyForInvoicingDataSet aFindDesignProjectsReadyForInvoicingDataSet;
         FindDesignProjectsReadyForInvoicingDataSetTableAdapters.FindDesignProjectsReadyForInvoicingTableAdapter aFindDesignProjectsReadyForInvoicingTableAdapter;
 
+        FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet aFindDesignProjectsForInvoicingByOfficeBillingCodeDataSet;
+        FindDesignProjectsForInvoicingByOfficeBillingCodeDataSetTableAdapters.FindDesignProjectsForInvoicingByOfficeBillingCodeTableAdapter aFindDesignProjectsForInvoicingByOfficeBillingCodeTableAdapter;
+
+        public FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet FindDesignProjectsForInvoicingByOfficeBillingCode(int intOfficeID, int intBillingID)
+        {
+            try
+            {
+                aFindDesignProjectsForInvoicingByOfficeBillingCodeDataSet = new FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet();
+                aFindDesignProjectsForInvoicingByOfficeBillingCodeTableAdapter = new FindDesignProjectsForInvoicingByOfficeBillingCodeDataSetTableAdapters.FindDesignProjectsForInvoicingByOfficeBillingCodeTableAdapter();
+                aFindDesignProjectsForInvoicingByOfficeBillingCodeTableAdapter.Fill(aFindDesignProjectsForInvoicingByOfficeBillingCodeDataSet.FindDesignProjectsForInvoicingByOfficeBillingCode, intOfficeID, intBillingID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "WOV Invoicing Class // Find Design Projects For Invoicing By Office Billitn Code " + Ex.Message);
+            }
+
+            return aFindDesignProjectsForInvoicingByOfficeBillingCodeDataSet;
+        }
         public FindDesignProjectsReadyForInvoicingDataSet FindDesignProjectsForInvoicing()
         {
             try

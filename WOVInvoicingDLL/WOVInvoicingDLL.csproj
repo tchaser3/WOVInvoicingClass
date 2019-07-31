@@ -44,6 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindDesignProjectsReadyForInvoicingDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -189,6 +194,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet.xsc">
+      <DependentUpon>FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet.xss">
+      <DependentUpon>FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindDesignProjectsReadyForInvoicingDataSet.xsc">
       <DependentUpon>FindDesignProjectsReadyForInvoicingDataSet.xsd</DependentUpon>
     </None>
