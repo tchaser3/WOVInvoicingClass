@@ -95,6 +95,24 @@ namespace WOVInvoicingDLL
         FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet aFindDesignProjectsForInvoicingByOfficeBillingCodeDataSet;
         FindDesignProjectsForInvoicingByOfficeBillingCodeDataSetTableAdapters.FindDesignProjectsForInvoicingByOfficeBillingCodeTableAdapter aFindDesignProjectsForInvoicingByOfficeBillingCodeTableAdapter;
 
+        FindWOVInvoicingByTransactionDateDataSet aFindWOVInvoicingByTransactionDateDataSet;
+        FindWOVInvoicingByTransactionDateDataSetTableAdapters.FindWOVInvoicingByTransactionDateTableAdapter aFindWOVInvoicingByTransactionDateTableAdapter;
+
+        public FindWOVInvoicingByTransactionDateDataSet FindWOVInvoicingByTransactionDate(DateTime datTransactionDate)
+        {
+            try
+            {
+                aFindWOVInvoicingByTransactionDateDataSet = new FindWOVInvoicingByTransactionDateDataSet();
+                aFindWOVInvoicingByTransactionDateTableAdapter = new FindWOVInvoicingByTransactionDateDataSetTableAdapters.FindWOVInvoicingByTransactionDateTableAdapter();
+                aFindWOVInvoicingByTransactionDateTableAdapter.Fill(aFindWOVInvoicingByTransactionDateDataSet.FindWOVInvoicingByTransactionDate, datTransactionDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "WOV Invoicing Class // Find WOV Invoicing By Transaction Date " + Ex.Message);
+            }
+
+            return aFindWOVInvoicingByTransactionDateDataSet;
+        }
         public FindDesignProjectsForInvoicingByOfficeBillingCodeDataSet FindDesignProjectsForInvoicingByOfficeBillingCode(int intOfficeID, int intBillingID)
         {
             try
@@ -460,14 +478,14 @@ namespace WOVInvoicingDLL
 
             return aFindWOVInvoiceByDateRangeDataSet;
         }
-        public bool InsertWOVInvoice(int intProjectID, int intEmployeeID, int intBillingID)
+        public bool InsertWOVInvoice(DateTime datTransactionDate, int intProjectID, int intEmployeeID, int intBillingID)
         {
             bool blnFatalError = false;
 
             try
             {
                 aInsertWOVInvoiceTableAdapter = new InsertWOVInvoiceEntryTableAdapters.QueriesTableAdapter();
-                aInsertWOVInvoiceTableAdapter.InsertWOVInvoice(DateTime.Now, intProjectID, intEmployeeID, intBillingID);
+                aInsertWOVInvoiceTableAdapter.InsertWOVInvoice(datTransactionDate, intProjectID, intEmployeeID, intBillingID);
             }
             catch (Exception Ex)
             {

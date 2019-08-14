@@ -104,6 +104,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindWOVInvoicingByEmployeeIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindWOVInvoicingByTransactionDateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWOVInvoicingByTransactionDateDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindWOVInvoicingItemsByBillingIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -325,6 +330,17 @@
     </None>
     <None Include="FindWOVInvoicingByEmployeeIDDataSet.xss">
       <DependentUpon>FindWOVInvoicingByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoicingByTransactionDateDataSet.xsc">
+      <DependentUpon>FindWOVInvoicingByTransactionDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWOVInvoicingByTransactionDateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWOVInvoicingByTransactionDateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWOVInvoicingByTransactionDateDataSet.xss">
+      <DependentUpon>FindWOVInvoicingByTransactionDateDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindWOVInvoicingItemsByBillingIDDataSet.xsc">
       <DependentUpon>FindWOVInvoicingItemsByBillingIDDataSet.xsd</DependentUpon>
