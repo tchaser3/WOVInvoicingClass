@@ -903,19 +903,26 @@ namespace WOVInvoicingDLL.FindWOVInvoicingByTransactionDateDataSetTableAdapters 
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransactionDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProjectID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FindWOVInvoicingByTransactionDateDataSet.FindWOVInvoicingByTransactionDateDataTable dataTable, global::System.Nullable<global::System.DateTime> TransactionDate) {
+        public virtual int Fill(FindWOVInvoicingByTransactionDateDataSet.FindWOVInvoicingByTransactionDateDataTable dataTable, global::System.Nullable<global::System.DateTime> TransactionDate, global::System.Nullable<int> ProjectID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((TransactionDate.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(TransactionDate.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ProjectID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(ProjectID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -928,13 +935,19 @@ namespace WOVInvoicingDLL.FindWOVInvoicingByTransactionDateDataSetTableAdapters 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FindWOVInvoicingByTransactionDateDataSet.FindWOVInvoicingByTransactionDateDataTable GetData(global::System.Nullable<global::System.DateTime> TransactionDate) {
+        public virtual FindWOVInvoicingByTransactionDateDataSet.FindWOVInvoicingByTransactionDateDataTable GetData(global::System.Nullable<global::System.DateTime> TransactionDate, global::System.Nullable<int> ProjectID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((TransactionDate.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(TransactionDate.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ProjectID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(ProjectID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             FindWOVInvoicingByTransactionDateDataSet.FindWOVInvoicingByTransactionDateDataTable dataTable = new FindWOVInvoicingByTransactionDateDataSet.FindWOVInvoicingByTransactionDateDataTable();
             this.Adapter.Fill(dataTable);

@@ -98,13 +98,13 @@ namespace WOVInvoicingDLL
         FindWOVInvoicingByTransactionDateDataSet aFindWOVInvoicingByTransactionDateDataSet;
         FindWOVInvoicingByTransactionDateDataSetTableAdapters.FindWOVInvoicingByTransactionDateTableAdapter aFindWOVInvoicingByTransactionDateTableAdapter;
 
-        public FindWOVInvoicingByTransactionDateDataSet FindWOVInvoicingByTransactionDate(DateTime datTransactionDate)
+        public FindWOVInvoicingByTransactionDateDataSet FindWOVInvoicingByTransactionDate(DateTime datTransactionDate, int intProjectID)
         {
             try
             {
                 aFindWOVInvoicingByTransactionDateDataSet = new FindWOVInvoicingByTransactionDateDataSet();
                 aFindWOVInvoicingByTransactionDateTableAdapter = new FindWOVInvoicingByTransactionDateDataSetTableAdapters.FindWOVInvoicingByTransactionDateTableAdapter();
-                aFindWOVInvoicingByTransactionDateTableAdapter.Fill(aFindWOVInvoicingByTransactionDateDataSet.FindWOVInvoicingByTransactionDate, datTransactionDate);
+                aFindWOVInvoicingByTransactionDateTableAdapter.Fill(aFindWOVInvoicingByTransactionDateDataSet.FindWOVInvoicingByTransactionDate, datTransactionDate, intProjectID);
             }
             catch (Exception Ex)
             {
